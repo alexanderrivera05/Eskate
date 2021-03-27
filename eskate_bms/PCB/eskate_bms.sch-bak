@@ -1,0 +1,272 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 16
+Title "Eskate BMS"
+Date "2021-02-01"
+Rev "Rev:1.0"
+Comp "Cerberus"
+Comment1 ""
+Comment2 ""
+Comment3 "Alexander Rivera"
+Comment4 "Designed By:"
+$EndDescr
+$Sheet
+S 2000 1000 1990 1990
+U 6018D3D5
+F0 "BQ76200" 50
+F1 "BQ76200.sch" 50
+F2 "SNSP" O R 3990 1400 50 
+F3 "SNSN" O R 3990 1500 50 
+F4 "PACKDIV" O L 2000 2500 50 
+F5 "CHG_EN" I R 3990 1200 50 
+F6 "CP_EN" I L 2000 2800 50 
+F7 "DSG_EN" I R 3990 1300 50 
+F8 "PMON_EN" I L 2000 2700 50 
+F9 "PCHG_EN" I L 2000 2600 50 
+$EndSheet
+$Sheet
+S 3500 3800 1990 1990
+U 6018D57B
+F0 "BQ78350" 50
+F1 "BQ78350.sch" 50
+F2 "LEDP" I R 5490 4000 50 
+F3 "PMON_EN" O L 3500 4100 50 
+F4 "CP_EN" O L 3500 4000 50 
+F5 "PACK_DIV" I L 3500 4300 50 
+F6 "SDA" I R 5490 4200 50 
+F7 "SCL" I R 5490 4300 50 
+F8 "ALERT" I R 5490 4100 50 
+F9 "PCHG_EN" O L 3500 4200 50 
+$EndSheet
+$Comp
+L power:+BATT #PWR0101
+U 1 1 602A3116
+P 1200 800
+F 0 "#PWR0101" H 1200 650 50  0001 C CNN
+F 1 "+BATT" V 1130 930 50  0000 C CNN
+F 2 "" H 1200 800 50  0001 C CNN
+F 3 "" H 1200 800 50  0001 C CNN
+	1    1200 800 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:-BATT #PWR0102
+U 1 1 602A37E4
+P 1200 900
+F 0 "#PWR0102" H 1200 750 50  0001 C CNN
+F 1 "-BATT" V 1260 1040 50  0000 C CNN
+F 2 "" H 1200 900 50  0001 C CNN
+F 3 "" H 1200 900 50  0001 C CNN
+	1    1200 900 
+	0    1    1    0   
+$EndComp
+$Sheet
+S 5000 1010 1990 1990
+U 6018D4E9
+F0 "BQ76940" 50
+F1 "BQ76940.sch" 50
+F2 "SNSP" I L 5000 1400 50 
+F3 "SNSN" I L 5000 1500 50 
+F4 "ALERT" O R 6990 2700 50 
+F5 "SCL" I R 6990 2500 50 
+F6 "SDA" I R 6990 2600 50 
+F7 "CHG_EN" O L 5000 1200 50 
+F8 "DSG_EN" O L 5000 1300 50 
+F9 "LEDP" O R 6990 2800 50 
+$EndSheet
+Text GLabel 1200 1300 2    50   Input ~ 0
+PACK-
+Text GLabel 1200 1100 2    50   Input ~ 0
+PACK+
+Wire Wire Line
+	1100 800  1200 800 
+Wire Wire Line
+	1100 900  1200 900 
+Wire Wire Line
+	1100 1100 1200 1100
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 60F98088
+P 1000 1950
+F 0 "H3" V 1000 2120 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1146 1953 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1000 1950 50  0001 C CNN
+F 3 "~" H 1000 1950 50  0001 C CNN
+	1    1000 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 1500 3990 1500
+Wire Wire Line
+	5000 1400 3990 1400
+Wire Wire Line
+	5000 1300 3990 1300
+Wire Wire Line
+	5000 1200 3990 1200
+Wire Wire Line
+	3500 4000 1900 4000
+Wire Wire Line
+	1900 4000 1900 2800
+Wire Wire Line
+	1900 2800 2000 2800
+Wire Wire Line
+	3500 4100 1800 4100
+Wire Wire Line
+	1800 4100 1800 2700
+Wire Wire Line
+	1800 2700 2000 2700
+Wire Wire Line
+	3500 4200 1700 4200
+Wire Wire Line
+	1700 4200 1700 2600
+Wire Wire Line
+	1700 2600 2000 2600
+Wire Wire Line
+	3500 4300 1600 4300
+Wire Wire Line
+	1600 4300 1600 2500
+Wire Wire Line
+	1600 2500 2000 2500
+Wire Wire Line
+	5490 4000 7100 4000
+Wire Wire Line
+	7100 4000 7100 2800
+Wire Wire Line
+	7100 2800 6990 2800
+Wire Wire Line
+	5490 4100 7200 4100
+Wire Wire Line
+	7200 4100 7200 2700
+Wire Wire Line
+	7200 2700 6990 2700
+Wire Wire Line
+	5490 4200 7300 4200
+Wire Wire Line
+	7300 4200 7300 2600
+Wire Wire Line
+	7300 2600 6990 2600
+Wire Wire Line
+	5490 4300 7400 4300
+Wire Wire Line
+	7400 4300 7400 2500
+Wire Wire Line
+	7400 2500 6990 2500
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 60F9B767
+P 900 800
+F 0 "J1" H 900 870 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1008 890 50  0001 C CNN
+F 2 "user-footprints:XT90PW" H 900 800 50  0001 C CNN
+F 3 "~" H 900 800 50  0001 C CNN
+	1    900  800 
+	1    0    0    -1  
+$EndComp
+Text GLabel 1500 1750 2    50   Input ~ 0
+PACK-
+Text GLabel 1500 1550 2    50   Input ~ 0
+PACK+
+Wire Wire Line
+	1400 1550 1500 1550
+Wire Wire Line
+	1400 1750 1500 1750
+$Comp
+L Connector:Barrel_Jack_Switch J3
+U 1 1 61170B53
+P 1100 1650
+F 0 "J3" H 1157 1875 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 1157 1876 50  0001 C CNN
+F 2 "user-footprints:SWITCHCRAFT_RAPC722X" H 1150 1610 50  0001 C CNN
+F 3 "~" H 1150 1610 50  0001 C CNN
+	1    1100 1650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1400 1650
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 6122D232
+P 1000 2250
+F 0 "H4" V 1000 2420 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1146 2253 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1000 2250 50  0001 C CNN
+F 3 "~" H 1000 2250 50  0001 C CNN
+	1    1000 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0143
+U 1 1 6122D238
+P 1300 1950
+F 0 "#PWR0143" H 1300 1700 50  0001 C CNN
+F 1 "GND" H 1305 1777 50  0000 C CNN
+F 2 "" H 1300 1950 50  0001 C CNN
+F 3 "" H 1300 1950 50  0001 C CNN
+	1    1300 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1950 1300 1950
+$Comp
+L Mechanical:MountingHole_Pad H5
+U 1 1 6139BD23
+P 1000 2550
+F 0 "H5" V 1000 2720 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1146 2553 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1000 2550 50  0001 C CNN
+F 3 "~" H 1000 2550 50  0001 C CNN
+	1    1000 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H6
+U 1 1 6139BD30
+P 1000 2850
+F 0 "H6" V 1000 3020 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1146 2853 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1000 2850 50  0001 C CNN
+F 3 "~" H 1000 2850 50  0001 C CNN
+	1    1000 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 6140D39E
+P 1000 1100
+F 0 "H1" V 1000 1270 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1146 1103 50  0001 C CNN
+F 2 "MountingHole:MountingHole_5.5mm_Pad_Via" H 1000 1100 50  0001 C CNN
+F 3 "~" H 1000 1100 50  0001 C CNN
+	1    1000 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 6141022B
+P 1000 1300
+F 0 "H2" V 1000 1470 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1146 1303 50  0001 C CNN
+F 2 "MountingHole:MountingHole_5.5mm_Pad_Via" H 1000 1300 50  0001 C CNN
+F 3 "~" H 1000 1300 50  0001 C CNN
+	1    1000 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1200 1300 1100 1300
+NoConn ~ 1100 2250
+NoConn ~ 1100 2550
+NoConn ~ 1100 2850
+$Comp
+L alexembedded_logo:LOGO #G?
+U 1 1 618D147A
+P 10680 6210
+F 0 "#G?" H 10680 5472 60  0001 C CNN
+F 1 "LOGO" H 10680 6948 60  0001 C CNN
+F 2 "" H 10680 6210 50  0001 C CNN
+F 3 "" H 10680 6210 50  0001 C CNN
+	1    10680 6210
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
